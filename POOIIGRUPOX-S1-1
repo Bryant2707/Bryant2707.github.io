@@ -1,0 +1,57 @@
+package com.mycompany.pooii.grupox.s1;
+
+
+public class POOIIGRUPOXS1 {
+
+    public static void main(String[] args) {
+        
+    }
+
+public class cCirculo {
+    private double radio=12.5;
+    private String color="azul"; 
+
+    public cCirculo() {
+    }
+
+    public double getRadio() {
+        return radio;
+    }
+
+    public void setRadio(double radio) {
+        this.radio = radio;
+    }
+
+    public String getColor() {
+        return color;
+    }
+
+    public void setColor(String color) {
+        this.color = color;
+    }
+    
+    public double getArea(){
+        double area=radio*radio*Math.PI;
+        return area;
+    }
+    
+}
+
+public class cCirculoTest {
+     public static void main(String[] args) {
+         cCirculo c1=new cCirculo();
+         System.out.println("cCirculo 1:");
+         System.out.println("Radio:"+ c1.getRadio());
+         System.out.println("Área:" + c1.getArea());
+         
+         cCirculo c2=new cCirculo();
+         System.out.println("Circulo2:");
+         System.out.println("Radio:"+c2.getRadio());
+         System.out.println("Área:"+c2.getArea());
+     }
+    
+      
+}
+
+}
+
