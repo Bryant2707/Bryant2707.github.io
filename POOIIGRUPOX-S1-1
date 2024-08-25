@@ -1,57 +1,132 @@
-package com.mycompany.pooii.grupox.s1;
+package pooii.grupox.s1;
 
-
-public class POOIIGRUPOXS1 {
-
-    public static void main(String[] args) {
-        
-    }
-
-public class cCirculo {
-    private double radio=12.5;
-    private String color="azul"; 
-
-    public cCirculo() {
-    }
-
-    public double getRadio() {
-        return radio;
-    }
-
-    public void setRadio(double radio) {
-        this.radio = radio;
-    }
-
-    public String getColor() {
-        return color;
-    }
-
-    public void setColor(String color) {
-        this.color = color;
-    }
-    
-    public double getArea(){
-        double area=radio*radio*Math.PI;
-        return area;
-    }
-    
-}
 
 public class cCirculoTest {
      public static void main(String[] args) {
-         cCirculo c1=new cCirculo();
-         System.out.println("cCirculo 1:");
-         System.out.println("Radio:"+ c1.getRadio());
-         System.out.println("Área:" + c1.getArea());
+         cCirculo c1 = new cCirculo();
+          System.out.println("Radio del círculo () : " + c1.getRadio());
+          System.out.println("Área del círculo () : " + c1.getArea());
          
-         cCirculo c2=new cCirculo();
-         System.out.println("Circulo2:");
-         System.out.println("Radio:"+c2.getRadio());
-         System.out.println("Área:"+c2.getArea());
+         cCirculo c2 = new cCirculo();
+          System.out.println("Radio del círculo (con radio 6.55): " + c2.getRadio());
+          System.out.println("Área del círculo (con radio 6.55): " + c2.getArea());
+         
+         cCirculo c3 = new cCirculo();
+          System.out.println("Radio del círculo (con radio 8.0 ): " + c3.getRadio());
+          System.out.println("Área del círculo (con radio 8.0 ): " + c3.getArea());
+         
      }
+     
+     /*
+         2)Compilar y ejecutar la clase "Circulo.java". ¿Puedes ejecutar la clase “Circulo.java”? ¿Por
+          qué?
+          
+           - No se podria ejecutar la clase cCirculo.java ya que no contenia el metodo main,
+             es necesaria una clase con el metodo main para iniciar la ejecucion del programa
+         
+         3)¿Qué pasos en común debe realizaste para ejecutar cada uno de los ejercicios? Describir
+          conceptos del paradigma orientada a objetos
+          
+          1.Encapsulamiento: Los atributos de la clase cCirculo on privados  asi que estaran ocultos.
+          2.Constructor: Se utiliza para inicializar los objetos de una clase.
+          3.Metodos: Funciones que operan sobre los atributos de un objeto.
+         
+         
+         
+         4)Respuesta de las preguntas: 
+         
+         a. ¿Qué es el constructor y para qué sirve?
+           
+           - El constructor es un metodo especial que se utiliza para inicializar obejtos
+             su proposito es establecer los valores iniciales de los atributos.
+           
+           b.¿Con qué método recupero el radio del círculo?
+         
+            - Se recupera usando el metodo getRadio().
+           
+           c. ¿Por qué los atributos son privados y los métodos son públicos?
+            
+            - Los atributos se colocan en privado para encapsular el estado del objeto evitando
+              el acceso directo.Los metodos son publicos para permitir a otros objetos que puedan 
+              interactuar con la clase.
+         
+           d.¿Qué pasa si accedes directamente a los atributos del círculo desde el método main()?
+            
+            - Pues obtendra un error de compilacion ya que los atributos que son privados no son
+              accesibles fuera de la clase que los definio.
+         
+           e.¿Qué pasa si modificas directamente el atributo area del círculo desde el método main()?
+            
+            - Modificarlo desde fuera de la clase afectaria el encapsulamiento implicado y podria llevar a 
+              inconsistencias en los datos
+         
+           f.En la clase CirculoTest.java, ejecuta la siguiente instrucción: System.out.println(c1.radius), 
+             donde c1 es una instancia del objeto Círculo. ¿Qué ocurrió? Explique el mensaje de error.
+         
+            - Si intentas acceder directamente,obtendras un error de compilacion ya que radius es un atributo
+              privado en la clase circulo.
+           
+           g.En la clase CirculoTest.java, ejecuta la siguiente instrucción: c1.radius = 42.0, 
+             donde c1 es una instancia del objeto Círculo. ¿Qué ocurrió? Explica el mensaje de error.
+           
+            - Al intentar modificar c1.radius directamente,obtendras un error de compilacion ya que raiud es privado
+              y no se puede modificar directamente desde fuera de la clase.
+          
+           h.¿Con qué método modificas el valor de un atributo de la clase Circulo.java?
+            
+            - Modificar el valor de un atributo se have a traves de un metodo setter.
+           
+           i. Crear un objeto de tipo Círculo y modifica los valores por defecto. 
+           
+           j. ¿Para qué sirve la palabra reservada “this”?. Modifique el constructor con argumentos (radio y color) y 
+              utiliza “this” y métodos setters en la clase java”.
+             
+             - Se usa para referirse al objeto actual en un metodo o constructor.Ayuda a diferenciar entre atributos y parametros
+         
+           k. ¿Para qué sirve el método toString()?
+             
+             - Se utiliza para obtener una representacion en cadena del objeto.Se puede sobrescribir para mostrar informacion relevante 
+               del objeto
+         
+           i. Incluir el método toString() en la clase “Circulo.java”.
+            
+          
+         */
+         
+     }
+package pooii.grupox.s1;
+
+public class cCirculo {
+    private double radio;
+    private String color;
     
-      
+
+    public cCirculo() {
+        this.radio = 12.5;
+        this.color = "azul";
+    }
+
+    public cCirculo(double radio) {
+        this.radio = radio;
+        this.color = "azul";
+    }
+    
+    public double getRadio() {
+        return radio;
+    }
+    
+    public double getArea(){
+        double area = radio*radio*Math.PI;
+        return area;
+    }
+    
+    @Override
+    public String toString(){
+        return "Círculo[radio=" + radio + ", color=" + color + "]";
+        
+  
+    }
 }
 
-}
+
 
