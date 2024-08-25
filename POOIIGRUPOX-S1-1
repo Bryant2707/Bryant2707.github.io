@@ -89,11 +89,29 @@ public class cCirculoTest {
                del objeto
          
            i. Incluir el método toString() en la clase “Circulo.java”.
-            
-          
+
+         5) Trabaja en el diagrama de clase para la clase Circulo utilizando la herramienta online Visio
+            o PlantUML 
+         
+            @startuml
+                class cCírculo {
+                    - double radio = 12.5
+                    - String color = "azul"
+    
+                    + cCírculo()
+                    + cCírculo(double radio)
+                    + double getRadio()
+                    + double getArea()
+                    + void setRadio(double radio)
+                    + void setColor(String color)
+                    +String toString()
+                    }
+                    @enduml
          */
          
      }
+
+
 package pooii.grupox.s1;
 
 public class cCirculo {
